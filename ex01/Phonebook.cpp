@@ -9,9 +9,13 @@ Phonebook::~Phonebook(void) {
 }
 
 Contact::Contact(void) {
+
+	Contact::nb_inst += 1;
 	return;
 }
 
 Contact::~Contact(void) {
 	return;
 }
+
+int	Contact::nb_inst = -1;

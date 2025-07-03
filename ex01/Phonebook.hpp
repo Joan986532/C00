@@ -2,15 +2,16 @@
 # define PHONEBOOK_H
 
 # include <string>
+# include <iostream>
 
 class Contact {
 
 	public:
-		std::string	FirstName;
-		std::string	LastName;
-		std::string NickName;
-		std::string PhoneNumber;
-		std::string DarkSecret;
+		std::string firstname;
+		std::string lastname;
+		std::string nickname;
+		std::string phonenumber;
+		static int	nb_inst;
 		Contact(void);
 		~Contact(void);
 };
@@ -20,7 +21,6 @@ class Phonebook {
 	public:
 		Phonebook(void);
 		~Phonebook(void);
-	private:
 		Contact	Repertory[8];
 };
 
