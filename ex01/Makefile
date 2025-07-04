@@ -5,7 +5,7 @@ SOURCES = main.cpp \
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -g -Wall -Wextra -Werror -std=c++98
 
 #--------------------------------------#
 
