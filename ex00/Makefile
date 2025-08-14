@@ -4,14 +4,16 @@ SOURCES = megaphone.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+
+CXX = c++
 
 #--------------------------------------#
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	g++ $(OBJECTS) $(FLAGS) -o $(NAME)
+	$(CXX) $(OBJECTS) $(FLAGS) -o $(NAME)
 
 fclean: clean
 	rm -f $(NAME)

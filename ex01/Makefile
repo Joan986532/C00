@@ -5,14 +5,16 @@ SOURCES = main.cpp \
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-FLAGS = -g -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
+
+CXX = c++
 
 #--------------------------------------#
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	c++ $(OBJECTS) $(FLAGS) -o $(NAME)
+	$(CXX) $(OBJECTS) $(FLAGS) -o $(NAME)
 
 fclean: clean
 	rm -f $(NAME)
